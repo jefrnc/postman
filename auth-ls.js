@@ -41,6 +41,8 @@ const echoPostRequest = {
                   var expiryDate = new Date();
                   expiryDate.setSeconds(expiryDate.getSeconds() + responseJson.data.expires_in);
                   pm.environment.set('accessTokenExpiry', expiryDate.getTime());
+              } else {
+                  throw new Error("Authentication error"); 
               }
 
           }
