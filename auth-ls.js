@@ -14,8 +14,6 @@ const echoPostRequest = {
   }
 };
 
-function getToken()
-{
   var getToken = true;
 
   if (!pm.environment.get('accessTokenExpiry') || 
@@ -48,5 +46,3 @@ function getToken()
           }
       });
   }
-}
-
